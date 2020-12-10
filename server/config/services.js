@@ -59,7 +59,7 @@ module.exports = {
   },
   service4: {
     api: '/ratings/*',
-    url: 'http://ec2-18-222-190-75.us-east-2.compute.amazonaws.com:4444/',
+    url: 'http://localhost:4444/',
     bundle: 'bundle.js'
   }
 };
