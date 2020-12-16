@@ -3,13 +3,17 @@ const morgan = require('morgan');
 const path = require('path');
 const router = require('./router');
 const compression = require('compression');
+<<<<<<< HEAD
+=======
 
 
 app.use(compression());
+>>>>>>> c8b3d479c144a8f18c6ac7fba305a524941b8136
 
 const PUBLIC_DIR = path.resolve(__dirname, '..', 'public');
 const app = express();
 
+app.use(compression());
 app.use(morgan('dev'));
 app.use(express.static(PUBLIC_DIR));
 
