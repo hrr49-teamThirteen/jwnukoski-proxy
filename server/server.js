@@ -4,16 +4,12 @@ const path = require('path');
 const router = require('./router');
 const compression = require('compression');
 
-
-app.use(compression());
-
 const PUBLIC_DIR = path.resolve(__dirname, '..', 'public');
 const app = express();
 
+app.use(compression());
 app.use(morgan('dev'));
 app.use(express.static(PUBLIC_DIR));
-
-
 
 app.get('/:item_id', (req, res) => {
   res.sendFile(`${PUBLIC_DIR}/index.html`);
